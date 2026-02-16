@@ -13,7 +13,6 @@ import { Separator } from "@/components/ui/separator";
 // import { ManekiNeko } from "@/components/maneki-neko";
 import { TechBadges } from "@/components/tech-badges";
 // import { MagneticButton } from "@/components/magnetic-button";
-import { SplashWrapper } from "@/components/splash-wrapper";
 import { AnimatedGreeting } from "@/components/animated-greeting";
 import { SpotifyItem } from "@/components/spotify-item";
 import { ContactForm } from "@/components/contact-form";
@@ -33,7 +32,7 @@ export default function Home() {
   const t = useI18n();
 
   return (
-    <SplashWrapper>
+
       <main>
         <section id="hero" className="py-32 px-4">
           <div className="mx-auto container">
@@ -297,6 +296,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </SplashWrapper>
+
   );
 }

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { I18nProviderClient } from "@/locales/client";
 
+import { SplashWrapper } from "@/components/splash-wrapper";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -15,9 +16,11 @@ export default async function SubLayout({
 
   return (
     <I18nProviderClient locale={locale}>
-      <Navbar />
-      {children}
-      <Footer />
+      <SplashWrapper>
+        <Navbar />
+        {children}
+        <Footer />
+      </SplashWrapper>
     </I18nProviderClient>
   );
 }
