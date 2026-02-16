@@ -10,9 +10,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
-// import { ManekiNeko } from "@/components/maneki-neko";
+import { ManekiNeko } from "@/components/maneki-neko";
 import { TechBadges } from "@/components/tech-badges";
-// import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedGreeting } from "@/components/animated-greeting";
 import { SpotifyItem } from "@/components/spotify-item";
 import { ContactForm } from "@/components/contact-form";
@@ -21,12 +20,6 @@ import { SocialList } from "@/components/social-list";
 import { ProjectsList } from "@/components/projects-list";
 import { PostsList } from "@/components/posts-list";
 import { Rocket, Instagram, Twitter, Linkedin, Github } from "lucide-react";
-
-/**
- * TODO:
- * [] Edit section title, subtitle, and description.
- * [] Configure the Multi-Language.
- */
 
 export default function Home() {
   const t = useI18n();
@@ -97,7 +90,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-1/2 text-center">
                 <AspectRatio ratio={1 / 1} className="bg-muted rounded-lg mb-4">
-                  {/* <ManekiNeko /> */}
+                  <ManekiNeko />
                 </AspectRatio>
                 <p className="text-xs text-muted-foreground text-center max-w-md w-full px-4 leading-relaxed mx-auto">
                   Credits:{" "}
