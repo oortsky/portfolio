@@ -1,0 +1,322 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "home_hero": {
+    "tagline": "Membangun aplikasi web dan produk digital yang praktis.",
+    "contact_cta": "Mari Bicara",
+    "projects_cta": "Lihat Karya Saya"
+  },
+  "home_model": {
+    "credits": "Kredit",
+    "by": "oleh",
+    "licensed_under": "dilisensikan di bawah"
+  },
+  "home_projects": {
+    "title": "Proyek Unggulan",
+    "description": "Beberapa proyek dan produk yang telah saya buat.",
+    "action_label": "Lihat Semua Proyek",
+    "empty_title": "Belum ada proyek",
+    "empty_description": "Proyek akan muncul di sini setelah tersedia."
+  },
+  "home_blog": {
+    "title": "Artikel Terbaru",
+    "description": "Pemikiran, tutorial, dan catatan dari perjalanan saya.",
+    "action_label": "Lihat Semua Artikel",
+    "empty_title": "Belum ada artikel",
+    "empty_description": "Artikel akan muncul di sini setelah diterbitkan."
+  },
+  "contact_content": {
+    "title": "Kontak",
+    "description": "Punya proyek, ide kolaborasi, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya."
+  },
+  "contact_form": {
+    "title": "Kontak Email",
+    "description": "Punya pertanyaan, proyek, atau ide kolaborasi? Kirimkan pesan kepada saya.",
+
+    "fields": {
+      "name": {
+        "label": "Nama",
+        "placeholder": "Siapa namamu?",
+        "hint": "Masukkan nama Anda minimal 3 karakter."
+      },
+
+      "email": {
+        "label": "Email",
+        "placeholder": "Apa alamat email Anda?",
+        "hint": "Masukkan alamat email yang valid."
+      },
+
+      "message": {
+        "label": "Pesan",
+        "placeholder": "Hei! Bisakah kamu membantuku...?",
+        "hint": "Masukkan pesan Anda minimal 20 karakter."
+      }
+    },
+
+    "actions": {
+      "reset": "Hapus",
+      "submit": "Kirim"
+    },
+
+    "validation": {
+      "required": "Diperlukan",
+      "name_min": "Nama harus terdiri minimal 3 karakter.",
+      "name_max": "Nama harus berisi maksimal 50 karakter.",
+      "email_invalid": "Hanya terima email yang valid.",
+      "message_min": "Pesan harus terdiri minimal 20 karakter.",
+      "message_max": "Pesan harus berisi maksimal 1000 karakter."
+    }
+  },
+  "contact_whatsapp": {
+    "title": "Kontak WhatsApp",
+    "description": "Lebih suka percakapan yang lebih cepat? Kirimkan pesan kepada saya melalui WhatsApp.",
+
+    "collapsible": {
+      "title": "WhatsApp Saya"
+    },
+
+    "field": {
+      "message": {
+        "label": "Pesan",
+        "placeholder": "Hei! Bisakah kamu membantuku...?",
+        "hint": "Masukkan pesan Anda minimal 20 karakter."
+      }
+    },
+
+    "actions": {
+      "reset": "Hapus",
+      "submit": "Lanjutkan"
+    },
+
+    "validation": {
+      "message_min": "Pesan harus terdiri minimal 20 karakter.",
+      "message_max": "Pesan harus berisi maksimal 1000 karakter."
+    }
+  },
+  "contact_socials": {
+    "title": "Tautan Media Sosial",
+    "description": "Terhubunglah dengan saya melalui media sosial dan platform pengembang."
+  },
+  "projects_content": {
+    "title": "Proyek",
+    "description": "Produk, eksperimen, dan solusi digital yang telah saya buat.",
+    "empty_title": "Tidak ada proyek yang ditemukan",
+    "empty_description": "Tidak ada proyek yang sesuai dengan filter Anda saat ini."
+  },
+  "blog_content": {
+    "title": "Blog",
+    "description": "Pemikiran, tutorial, catatan, dan pelajaran dari perjalanan saya.",
+    "empty_title": "Tidak ada artikel yang ditemukan.",
+    "empty_description": "Tidak ada artikel yang sesuai dengan filter Anda saat ini."
+  },
+  "content_filters": {
+    "field": {
+      "search": {
+        "placeholder": "Pencarian..."
+      },
+      "category": {
+        "placeholder": "Kategori",
+        "value": {
+          "all": "Semua"
+        }
+      },
+      "sort": {
+        "placeholder": "Sortir",
+        "value": {
+          "newest": "Terbaru",
+          "oldest": "Terlama",
+          "asce": "A-Z",
+          "desc": "Z-A"
+        }
+      }
+    }
+  },
+  "navbar": {
+    "lang_toggle": {
+      "tooltip": "Bahasa"
+    },
+    "mode_toggle": {
+      "label": {
+        "light": "Beralih ke mode terang",
+        "dark": "Beralih ke mode gelap"
+      },
+      "tooltip": "Tampilan"
+    },
+    "menu_toggle": {
+      "label": {
+        "open": "Buka menu",
+        "close": "Tutup menu"
+      },
+      "tooltip": "Navigasi"
+    }
+  },
+  "projects_detail": {
+    "back": "Kembali ke Proyek",
+    "repository": "Repositori",
+    "live_demo": "Lihat Demo"
+  },
+  "blog_detail": {
+    "back": "Kembali ke Blog",
+    "reading_time": "{minutes} menit membaca",
+    "word_count": "{count} kata"
+  },
+  "projects_card": {
+    "read_more": "Baca selengkapnya",
+    "repository": "Kode",
+    "live_demo": "Demo"
+  },
+  "blog_card": {
+    "read_more": "Baca selengkapnya",
+    "reading_time": "{minutes} menit membaca"
+  },
+  "about_intro": {
+    "title": "Perkenalan",
+    "content": "Saya adalah seorang Full-Stack Developer otodidak dari Indonesia yang memiliki passion dalam membangun aplikasi web modern, API, dan produk digital yang mampu menyelesaikan permasalahan nyata. Perjalanan saya di dunia teknologi berawal dari rasa ingin tahu yang besar terhadap bagaimana perangkat lunak dapat mengubah cara manusia berkomunikasi, bekerja, dan menciptakan nilai. Seiring waktu, saya mengembangkan kemampuan di sisi frontend maupun backend, memanfaatkan berbagai teknologi modern untuk menciptakan solusi yang skalabel, mudah dipelihara, dan berfokus pada kebutuhan pengguna. Saya menikmati proses mengubah ide menjadi produk yang dapat digunakan melalui perpaduan antara arsitektur yang baik, pengalaman pengguna yang matang, dan prinsip rekayasa perangkat lunak yang praktis.\n\nDi luar pengembangan perangkat lunak, saya memiliki ketertarikan yang kuat terhadap kecerdasan buatan, kewirausahaan, bisnis digital, dan berbagai teknologi masa depan. Saya senang mengeksplorasi ide-ide baru, memvalidasi peluang bisnis, serta membangun produk yang berpotensi memberikan dampak yang berarti. Belajar secara berkelanjutan merupakan bagian penting dari perjalanan saya, dan saya selalu mencari tantangan baru yang dapat membantu saya berkembang baik secara teknis maupun profesional. Baik dalam mengembangkan platform web, merancang API, bereksperimen dengan solusi berbasis AI, maupun membangun usaha baru, saya terdorong oleh semangat untuk mengubah konsep yang ambisius menjadi kenyataan."
+  },
+  "about_photo": {
+    "image": "Gambar",
+    "via": "dari",
+    "edited_with": "Diedit dengan"
+  },
+  "about_journey": {
+    "title": "Perjalanan",
+    "description": "Ringkasan singkat perjalanan saya.",
+
+    "items": {
+      "education": {
+        "title": "SMK Teknik Kendaraan Ringan",
+        "description": "Menempuh pendidikan formal di bidang otomotif sambil mengembangkan kemampuan analitis dan pemecahan masalah."
+      },
+
+      "programming": {
+        "title": "Mengenal Dunia Pemrograman",
+        "description": "Mulai tertarik pada pengembangan perangkat lunak dan mempelajari teknologi secara mandiri."
+      },
+
+      "self_taught": {
+        "title": "Belajar Secara Otodidak",
+        "description": "Mempelajari HTML, CSS, JavaScript, React, Next.js, TypeScript, database, API, dan berbagai teknologi modern."
+      },
+
+      "projects": {
+        "title": "Membangun Proyek Nyata",
+        "description": "Mulai membuat aplikasi yang dapat digunakan oleh pengguna nyata serta memahami deployment dan pengelolaan sistem."
+      },
+
+      "startup": {
+        "title": "Menjelajahi Dunia Startup",
+        "description": "Mempelajari model bisnis digital, validasi pasar, monetisasi, dan strategi pertumbuhan produk."
+      },
+
+      "ai": {
+        "title": "AI, SaaS, dan Produk Digital",
+        "description": "Berfokus membangun solusi berbasis AI, produk SaaS, layanan API, dan berbagai produk digital."
+      }
+    }
+  },
+  "about_skills": {
+    "title": "Kemampuan saya saat ini",
+    "description": "Teknologi dan keahlian yang saya kuasai."
+  },
+  "about_tools": {
+    "title": "Alat-alat yang saya gunakan",
+    "description": "Tools dan platform yang saya gunakan setiap hari."
+  },
+  "home_about_what_i_do_title": "Apa yang Saya Kerjakan?",
+  "home_about_what_i_do_content": "Saya membangun aplikasi web modern, solusi berbasis AI, API, dan produk digital dengan fokus pada performa, skalabilitas, dan pengalaman pengguna.",
+
+  "home_about_currently_building_title": "Apa yang Sedang Saya Bangun?",
+  "home_about_currently_building_content": "Saat ini saya sedang mengembangkan berbagai tools AI, produk SaaS, dan proyek eksperimental sambil mengeksplorasi otomasi, blockchain, dan teknologi masa depan.",
+  "about_fun_fact": {
+    "title": "Fakta Menarik",
+    "description": "Beberapa fakta acak tentang saya.",
+    "empty_label": "Klik dadu untuk melihat fakta menarik.",
+
+    "items": {
+      "1": "Angka favorit saya adalah 4 karena melambangkan kestabilan, struktur, dan fondasi yang kuat.",
+      "2": "Saya mempelajari pengembangan perangkat lunak secara otodidak melalui dokumentasi, eksperimen, dan proyek nyata.",
+      "3": "Saya lebih menikmati membangun produk daripada menghabiskan waktu mengikuti tutorial.",
+      "4": "Saya dapat menghabiskan berjam-jam untuk menelusuri dan memperbaiki satu bug hingga memahami akar masalahnya.",
+      "5": "Fotografi dan videografi menjadi sarana saya mengekspresikan kreativitas di luar dunia teknologi.",
+      "6": "Saya mulai membangun produk sebelum mendapatkan klien pertama.",
+      "7": "Saya tertarik pada persimpangan antara teknologi, bisnis, kecerdasan buatan, dan otomatisasi.",
+      "8": "Saya senang mengeksplorasi ide startup dan mengubahnya menjadi prototipe yang dapat diuji.",
+      "9": "Saya percaya bahwa dokumentasi resmi adalah sumber belajar terbaik bagi seorang developer.",
+      "10": "Saya lebih suka membangun solusi yang sederhana, andal, dan mudah dipelihara."
+    }
+  },
+  "about_timeline": {
+    "title": "Timeline",
+    "description": "Perjalanan dan pencapaian penting hingga saat ini.",
+
+    "items": {
+      "2021": {
+        "title": "Mulai Belajar Pemrograman",
+        "description": "Mulai mempelajari HTML, CSS, dan JavaScript sebagai fondasi pengembangan web."
+      },
+
+      "2022": {
+        "title": "Website Pertama",
+        "description": "Berhasil membangun dan melakukan deployment website pertama."
+      },
+
+      "2023": {
+        "title": "Proyek dan Eksperimen",
+        "description": "Mengembangkan berbagai proyek pribadi untuk memperdalam kemampuan teknis dan pengalaman membangun produk."
+      },
+
+      "2024": {
+        "title": "Fokus pada SaaS",
+        "description": "Mulai membangun produk SaaS dan mempelajari aspek bisnis digital serta validasi pasar."
+      },
+
+      "2025": {
+        "title": "AI dan Otomasi",
+        "description": "Mengeksplorasi AI, Text-to-SQL, workflow automation, layanan berbasis API, dan berbagai ide startup teknologi."
+      },
+
+      "2026": {
+        "title": "Membangun Produk Berkelanjutan",
+        "description": "Berfokus membangun produk teknologi yang dapat berkembang menjadi bisnis jangka panjang dengan nilai nyata bagi pengguna."
+      }
+    }
+  },
+  "navigation": {
+    "label": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "projects": "Proyek",
+      "blog": "Blog",
+      "contact": "Kontak"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Portfolio — OORTSKY (Bayu Aprio Pamungkas) | Full-Stack Developer",
+      "description": "Full-Stack Developer yang berfokus pada pengembangan aplikasi web modern, antarmuka pengguna, solusi AI, dan produk digital."
+    },
+    "about": {
+      "title": "Tentang | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Pelajari lebih lanjut tentang Bayu Aprio Pamungkas (OORTSKY), seorang Full-Stack Developer yang berfokus pada aplikasi skalabel, produk digital, dan solusi berbasis AI."
+    },
+    "projects": {
+      "title": "Proyek | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Jelajahi berbagai proyek perangkat lunak, eksperimen, dan produk yang dibangun menggunakan teknologi modern dan praktik terbaik rekayasa perangkat lunak."
+    },
+    "project": {
+      "title": "Proyek | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Lihat detail proyek, teknologi yang digunakan, tantangan yang dihadapi, dan solusi yang diterapkan."
+    },
+    "blog": {
+      "title": "Blog | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Artikel, tutorial, dan wawasan seputar pengembangan perangkat lunak, AI, teknologi web, dan kewirausahaan."
+    },
+    "post": {
+      "title": "Blog | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Baca artikel, tutorial, dan wawasan mengenai pengembangan perangkat lunak, AI, teknologi, dan kewirausahaan."
+    },
+    "contact": {
+      "title": "Kontak | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Hubungi OORTSKY untuk kolaborasi, proyek freelance, konsultasi, atau peluang profesional."
+    }
+  }
+}

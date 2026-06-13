@@ -1,0 +1,16 @@
+Tech Stack:
+[✓] 1. Vite
+[✓] 2. React.JS
+[✓] 3. Typescript
+[✓] 4. Tanstack Router
+[✓] 5. Tanstack Query + Discord Lanyard
+[✓] 6. Tanstack Form
+[✓] 7. Tailwind CSS v3
+[✓] 8. ShadCN/UI v2
+[✓] 9. Paraglide.JS (i18n)
+[✓] 10. Velite
+[] 11. Decap CMS
+[] 12. Hono
+[] 13. GitHub OAuth
+[✓] 15. Three.JS
+[✓] 16. Framer Motion

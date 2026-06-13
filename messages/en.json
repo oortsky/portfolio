@@ -1,0 +1,312 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "home_hero": {
+    "tagline": "Building practical web applications and digital products.",
+    "contact_cta": "Let's Talk",
+    "projects_cta": "See My Work"
+  },
+  "home_model": {
+    "credits": "Credits",
+    "by": "by",
+    "licensed_under": "is licensed under"
+  },
+  "home_projects": {
+    "title": "Featured Projects",
+    "description": "A selection of projects and products that I've built.",
+    "action_label": "View All Projects",
+    "empty_title": "No Projects Yet",
+    "empty_description": "Projects will appear here once they are available."
+  },
+  "home_blog": {
+    "title": "Latest Articles",
+    "description": "Thoughts, tutorials, and notes from my journey.",
+    "action_label": "View All Articles",
+    "empty_title": "No Articles Yet",
+    "empty_description": "Articles will appear here once they are published."
+  },
+  "contact_content": {
+    "title": "Contact",
+    "description": "Have a project, collaboration idea, or just want to say hello? Feel free to reach out."
+  },
+  "contact_form": {
+    "title": "Email Contact",
+    "description": "Have a question, project, or collaboration idea? Send me a message.",
+
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "What's your name?",
+        "hint": "Enter your name at least 3 characters."
+      },
+
+      "email": {
+        "label": "Email",
+        "placeholder": "What's your email address?",
+        "hint": "Enter a valid email address."
+      },
+
+      "message": {
+        "label": "Message",
+        "placeholder": "Hey! Can you help me...",
+        "hint": "Enter your message at least 20 characters."
+      }
+    },
+
+    "actions": {
+      "reset": "Reset",
+      "submit": "Send"
+    },
+
+    "validation": {
+      "required": "Required",
+      "name_min": "Name must be at least 3 characters.",
+      "name_max": "Name must be at most 50 characters.",
+      "email_invalid": "Only accept valid emails.",
+      "message_min": "Message must be at least 20 characters.",
+      "message_max": "Message must be at most 1000 characters."
+    }
+  },
+  "contact_whatsapp": {
+    "title": "WhatsApp Contact",
+    "description": "Prefer a quicker conversation? Send me a message via WhatsApp.",
+
+    "collapsible": {
+      "title": "WhatsApp Me"
+    },
+
+    "field": {
+      "message": {
+        "label": "Message",
+        "placeholder": "Hey! Can you help me...",
+        "hint": "Enter your message at least 20 characters."
+      }
+    },
+
+    "actions": {
+      "reset": "Reset",
+      "submit": "Continue"
+    },
+
+    "validation": {
+      "message_min": "Message must be at least 20 characters.",
+      "message_max": "Message must be at most 1000 characters."
+    }
+  },
+  "contact_socials": {
+    "title": "Social Links",
+    "description": "Connect with me through social media and developer platforms."
+  },
+  "projects_content": {
+    "title": "Projects",
+    "description": "Products, experiments, and digital solutions that I've built.",
+    "empty_title": "No Projects Found",
+    "empty_description": "No projects match your current filters."
+  },
+  "blog_content": {
+    "title": "Blog",
+    "description": "Thoughts, tutorials, notes, and lessons from my journey.",
+    "empty_title": "No Articles Found",
+    "empty_description": "No articles match your current filters."
+  },
+  "content_filters": {
+    "field": {
+      "search": {
+        "placeholder": "Search..."
+      },
+      "category": {
+        "placeholder": "Category",
+        "value": {
+          "all": "All"
+        }
+      },
+      "sort": {
+        "placeholder": "Sort",
+        "value": {
+          "newest": "Newest",
+          "oldest": "Oldest",
+          "asce": "A-Z",
+          "desc": "Z-A"
+        }
+      }
+    }
+  },
+  "navbar": {
+    "lang_toggle": {
+      "tooltip": "Language"
+    },
+    "mode_toggle": {
+      "label": {
+        "light": "Switch to light mode",
+        "dark": "Switch to dark mode"
+      },
+      "tooltip": "Appearance"
+    },
+    "menu_toggle": {
+      "label": {
+        "open": "Open menu",
+        "close": "Close menu"
+      },
+      "tooltip": "Navigation"
+    }
+  },
+  "projects_detail": {
+    "back": "Back to Projects",
+    "repository": "Repository",
+    "live_demo": "Live Demo"
+  },
+  "blog_detail": {
+    "back": "Back to Blog",
+    "reading_time": "{minutes} min read",
+    "word_count": "{count} words"
+  },
+  "projects_card": {
+    "read_more": "Read More",
+    "repository": "Code",
+    "live_demo": "Demo"
+  },
+  "blog_card": {
+    "read_more": "Read More",
+    "reading_time": "{minutes} min read"
+  },
+  "about_intro": {
+    "title": "Introduction",
+    "content": "I'm a self-taught Full-Stack Developer from Indonesia who is passionate about building modern web applications, APIs, and digital products that solve real-world problems. My journey into technology began with curiosity and a desire to understand how software shapes the way people communicate, work, and create value. Over the years, I have developed experience across both frontend and backend development, working with modern technologies to create scalable, maintainable, and user-focused solutions. I enjoy transforming ideas into functional products by combining clean architecture, thoughtful user experiences, and practical engineering principles.\n\nBeyond software development, I have a strong interest in artificial intelligence, entrepreneurship, digital business, and emerging technologies. I enjoy exploring innovative ideas, validating business opportunities, and building products that have the potential to create meaningful impact. Continuous learning is an important part of my journey, and I am always seeking new challenges that help me grow both technically and professionally. Whether it's developing web platforms, designing APIs, experimenting with AI-powered solutions, or launching new ventures, I am driven by the excitement of turning ambitious concepts into reality."
+  },
+  "about_photo": {
+    "image": "Image",
+    "via": "via",
+    "edited_with": "Edited with"
+  },
+  "about_journey": {
+    "title": "Journey",
+    "description": "A brief overview of my journey.",
+
+    "items": {
+      "education": {
+        "title": "Vocational High School - Automotive Engineering",
+        "description": "Completed formal education in automotive engineering while developing analytical and problem-solving skills."
+      },
+      "programming": {
+        "title": "Discovering Programming",
+        "description": "Became interested in software development and started learning technology independently."
+      },
+      "self_taught": {
+        "title": "Self-Taught Learning",
+        "description": "Learned HTML, CSS, JavaScript, React, Next.js, TypeScript, databases, APIs, and modern technologies."
+      },
+      "projects": {
+        "title": "Building Real Projects",
+        "description": "Started creating real-world applications and learning deployment practices."
+      },
+      "startup": {
+        "title": "Exploring Startups",
+        "description": "Studied digital business models, market validation, monetization, and product growth."
+      },
+      "ai": {
+        "title": "AI, SaaS, and Digital Products",
+        "description": "Focused on building AI-powered solutions, SaaS products, and digital services."
+      }
+    }
+  },
+  "about_skills": {
+    "title": "My current skills",
+    "description": "Technologies and skills I work with."
+  },
+  "about_tools": {
+    "title": "Tools that I use",
+    "description": "Tools and platforms I use every day."
+  },
+  "home_about_what_i_do_title": "What I Do?",
+  "home_about_what_i_do_content": "I build modern web applications, AI-powered solutions, APIs, and digital products with a focus on performance, scalability, and user experience.",
+
+  "home_about_currently_building_title": "What I'm Currently Building?",
+  "home_about_currently_building_content": "I'm currently building AI tools, SaaS products, and experimental projects while exploring automation, blockchain, and emerging technologies.",
+  "about_fun_fact": {
+    "title": "Fun Facts",
+    "description": "Random facts about me.",
+    "empty_label": "Click the dice to reveal a fact.",
+
+    "items": {
+      "1": "My favorite number is 4 because it represents stability, structure, and strong foundations.",
+      "2": "I learned software development through self-study, documentation, experimentation, and real-world projects.",
+      "3": "I enjoy building products more than consuming tutorials.",
+      "4": "I can spend hours tracking down and fixing a single bug until I understand its root cause.",
+      "5": "Photography and videography allow me to express creativity beyond technology.",
+      "6": "I started building products before getting my first client.",
+      "7": "I am interested in the intersection of technology, business, artificial intelligence, and automation.",
+      "8": "I enjoy exploring startup ideas and turning them into testable prototypes.",
+      "9": "I believe official documentation is the best learning resource for developers.",
+      "10": "I prefer building simple, reliable, and maintainable solutions."
+    }
+  },
+  "about_timeline": {
+    "title": "Timeline",
+    "description": "Important milestones throughout my journey.",
+
+    "items": {
+      "2021": {
+        "title": "Started Programming",
+        "description": "Began learning HTML, CSS, and JavaScript."
+      },
+      "2022": {
+        "title": "First Website",
+        "description": "Built and deployed my first website."
+      },
+      "2023": {
+        "title": "Projects and Experiments",
+        "description": "Developed personal projects and strengthened technical skills."
+      },
+      "2024": {
+        "title": "Focused on SaaS",
+        "description": "Started building SaaS products and learning digital business."
+      },
+      "2025": {
+        "title": "AI and Automation",
+        "description": "Explored AI, Text-to-SQL, workflow automation, and API-based services."
+      },
+      "2026": {
+        "title": "Building Sustainable Products",
+        "description": "Focused on creating technology products that can grow into long-term businesses."
+      }
+    }
+  },
+  "navigation": {
+    "label": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "blog": "Blog",
+      "contact": "Contact"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Portfolio — OORTSKY (Bayu Aprio Pamungkas) | Full-Stack Developer",
+      "description": "Full-Stack Developer specializing in modern web applications, user interfaces, AI-powered solutions, and digital product development."
+    },
+    "about": {
+      "title": "About | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Learn more about Bayu Aprio Pamungkas (OORTSKY), a Full-Stack Developer focused on building scalable applications, digital products, and AI-powered solutions."
+    },
+    "projects": {
+      "title": "Projects | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Explore a collection of software projects, experiments, and products built using modern technologies and engineering best practices."
+    },
+    "project": {
+      "title": "Projects | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Discover project details, technologies, challenges, and solutions behind each product."
+    },
+    "blog": {
+      "title": "Blog | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Thoughts, tutorials, technical insights, and lessons learned about software engineering, web development, AI, and entrepreneurship."
+    },
+    "post": {
+      "title": "Blog | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Read articles, tutorials, and insights about software development, AI, technology, and entrepreneurship."
+    },
+    "contact": {
+      "title": "Contact | OORTSKY (Bayu Aprio Pamungkas)",
+      "description": "Get in touch with OORTSKY for collaborations, freelance projects, consulting, or professional opportunities."
+    }
+  }
+}
