@@ -20,7 +20,7 @@ export function SocialIcons() {
           )}
           asChild
         >
-          <a href={item.url ?? "#"} target="_blank" rel="noopener noreferrer">
+          <a href={item.href} target="_blank" rel="noopener noreferrer">
             <Icon icon={`simple-icons:${item.icon}`} />
           </a>
         </Button>

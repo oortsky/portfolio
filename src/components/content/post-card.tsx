@@ -21,7 +21,7 @@ export function PostCard({ post }: { post: Post }) {
         <>
           <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
           <img
-            src={post.cover}
+            src={post.cover.src}
             alt={post.title}
             className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
           />

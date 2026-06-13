@@ -11,7 +11,8 @@ import { Button } from "@/components/ui/button";
 
 export function ErrorPage({ error }: { error?: unknown }) {
   const router = useRouter();
-
+  const errorMessage = error instanceof Error ? error.message : String(error ?? "");
+  
   return (
     <Empty className="mx-auto container h-screen w-full flex justify-center items-center">
       <EmptyHeader>
@@ -23,9 +24,9 @@ export function ErrorPage({ error }: { error?: unknown }) {
       </EmptyHeader>
 
       <EmptyContent>
+      <>
         {import.meta.env.DEV && error && (
-          <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs opacity-60">
-            {error instanceof Error ? error.message : String(error)}
+          <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs opacity-60">{errorMessage}
           </code>
         )}
 
@@ -38,6 +39,7 @@ export function ErrorPage({ error }: { error?: unknown }) {
             Back to Home
           </Button>
         </div>
+        </>
       </EmptyContent>
     </Empty>
   );

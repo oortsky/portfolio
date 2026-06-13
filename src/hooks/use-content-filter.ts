@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 
-type SortOption = "newest" | "oldest" | "a-z" | "z-a";
+export type SortOption = "newest" | "oldest" | "a-z" | "z-a";
 
-type FilterableContent = {
+export type FilterableContent = {
   title: string;
   description?: string;
   category?: string;
