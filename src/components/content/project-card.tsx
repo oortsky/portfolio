@@ -23,7 +23,7 @@ export function ProjectCard({ project }: {project: Project}) {
         <>
           <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
           <img
-            src={post.cover.src}
+            src={project.cover.src}
             alt={project.title}
             className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
           />
