@@ -1,6 +1,14 @@
 import { defineConfig, s } from "velite";
 
 export default defineConfig({
+  root: "src/content",
+  output: {
+    data: ".velite",
+    assets: "src/assets",
+    base: "/src/assets/",
+    name: "[name]-[hash:8].[ext]",
+    clean: true
+  },
   collections: {
     posts: {
       name: "Post",
