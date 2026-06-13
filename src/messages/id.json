@@ -54,7 +54,11 @@
 
     "actions": {
       "reset": "Hapus",
-      "submit": "Kirim"
+      "submit": "Kirim",
+      "toast": {
+        "success": "Pesan berhasil terkirim!",
+        "failed": "Pesan gagal terkirim. Silakan coba lagi."
+      }
     },
 
     "validation": {

@@ -1,6 +1,8 @@
 import { useForm } from "@tanstack/react-form";
 import * as z from "zod";
 import { m } from "@/paraglide/messages.js";
+import emailjs from "@emailjs/browser";
+import confetti from "canvas-confetti";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -24,6 +26,8 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 
 import { Send, Trash } from "lucide-react";
+
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z
@@ -54,9 +58,37 @@ export function ContactForm() {
     },
 
     onSubmit: async ({ value }) => {
-      console.log(value);
+      try {
+        const data = {
+          title: "Portfolio",
+          time: new Date().toLocaleString("id-ID"),
+          ...value
+        };
 
-      form.reset();
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID!,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
+          data,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
+        );
+
+        toast(m["contact_form.actions.toast.success"](), {
+          position: "bottom-right"
+        });
+
+        confetti({
+          particleCount: 150,
+          spread: 60
+        });
+
+        form.reset();
+      } catch (error) {
+        toast(m["contact_form.actions.toast.failed"](), {
+          position: "bottom-right"
+        });
+
+        console.error(error);
+      }
     }
   });
 
@@ -92,7 +124,8 @@ export function ContactForm() {
                 return (
                   <Field data-invalid={isInvalid}>
                     <FieldLabel htmlFor={field.name}>
-                      {m["contact_form.fields.name.label"]()} <span className="text-destructive">*</span>
+                      {m["contact_form.fields.name.label"]()}{" "}
+                      <span className="text-destructive">*</span>
                     </FieldLabel>
 
                     <Input
@@ -145,7 +178,8 @@ export function ContactForm() {
                 return (
                   <Field data-invalid={isInvalid}>
                     <FieldLabel htmlFor={field.name}>
-                      {m["contact_form.fields.email.label"]()} <span className="text-destructive">*</span>
+                      {m["contact_form.fields.email.label"]()}{" "}
+                      <span className="text-destructive">*</span>
                     </FieldLabel>
 
                     <Input
@@ -200,7 +234,8 @@ export function ContactForm() {
                 return (
                   <Field data-invalid={isInvalid}>
                     <FieldLabel htmlFor={field.name}>
-                      {m["contact_form.fields.message.label"]()} <span className="text-destructive">*</span>
+                      {m["contact_form.fields.message.label"]()}{" "}
+                      <span className="text-destructive">*</span>
                     </FieldLabel>
 
                     <InputGroup>
@@ -211,7 +246,9 @@ export function ContactForm() {
                         onBlur={field.handleBlur}
                         onChange={e => field.handleChange(e.target.value)}
                         rows={6}
-                        placeholder={m["contact_form.fields.message.placeholder"]()}
+                        placeholder={m[
+                          "contact_form.fields.message.placeholder"
+                        ]()}
                         aria-invalid={isInvalid}
                         className="resize-none"
                       />
@@ -252,13 +289,11 @@ export function ContactForm() {
 
         <Field orientation="horizontal">
           <Button type="button" variant="outline" onClick={() => form.reset()}>
-            <Trash />
-            {m["contact_form.actions.reset"]()}
+            <Trash /> {m["contact_form.actions.reset"]()}
           </Button>
 
           <Button type="submit">
-            <Send />
-            {m["contact_form.actions.submit"]()}
+            <Send /> {m["contact_form.actions.submit"]()}
           </Button>
         </Field>
       </FieldGroup>

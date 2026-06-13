@@ -23,17 +23,18 @@ const RootLayout = () => (
     <ThemeProvider
       defaultTheme={SITE.defaultTheme}
       storageKey={STORAGE.themeKey}
-      className={SITE.globalFont}
     >
-      <TooltipProvider>
-        <Navbar />
-        <HeadContent />
-        <Outlet />
-        <Footer />
-        <Toaster />
-        {/* <TanStackRouterDevtools /> */}
-        {/* <TanStackDevtools plugins={[formDevtoolsPlugin()]} /> */}
-      </TooltipProvider>
+      <main className={SITE.globalFont}>
+        <TooltipProvider>
+          <Navbar />
+          <HeadContent />
+          <Outlet />
+          <Footer />
+          <Toaster />
+          {/* <TanStackRouterDevtools /> */}
+          {/* <TanStackDevtools plugins={[formDevtoolsPlugin()]} /> */}
+        </TooltipProvider>
+      </main>
     </ThemeProvider>
   </QueryClientProvider>
 );

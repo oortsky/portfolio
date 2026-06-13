@@ -54,7 +54,11 @@
 
     "actions": {
       "reset": "Reset",
-      "submit": "Send"
+      "submit": "Send",
+      "toast": {
+        "success": "Message sent successfully!",
+        "failed": "Failed to send message. Please try again."
+      }
     },
 
     "validation": {

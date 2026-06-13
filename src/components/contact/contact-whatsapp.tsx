@@ -60,8 +60,11 @@ export function ContactWhatsapp() {
     },
 
     onSubmit: async ({ value }) => {
-      console.log(value);
+      const waNumber = import.meta.env.VITE_WA_NUMBER;
+      const waMessage = value.message;
+      const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
 
+      window.open(waUrl, "_blank");
       form.reset();
     }
   });
@@ -122,7 +125,8 @@ export function ContactWhatsapp() {
                         return (
                           <Field data-invalid={showError}>
                             <FieldLabel htmlFor={field.name}>
-                              {m["contact_whatsapp.field.message.label"]()} <span className="text-destructive">*</span>
+                              {m["contact_whatsapp.field.message.label"]()}{" "}
+                              <span className="text-destructive">*</span>
                             </FieldLabel>
 
                             <InputGroup>
