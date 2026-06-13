@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { posts } from "@velite";
 import { m } from "@/paraglide/messages.js";
 
-import { BlogCard } from "@/components/content/blog-card";
+import { PostCard } from "@/components/content/post-card";
 import { ContentPage } from "@/components/content/content-page";
 
 export const Route = createFileRoute("/blog/")({
@@ -28,7 +28,7 @@ function Blog() {
       data={posts}
       emptyTitle={m["blog_content.empty_title"]()}
       emptyDescription={m["blog_content.empty_description"]()}
-      renderCard={post => <BlogCard key={post.slug} post={post} />}
+      renderCard={post => <PostCard key={post.slug} post={post} />}
     />
   );
 }

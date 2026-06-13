@@ -3,7 +3,7 @@ import { projects } from "@velite";
 import { m } from "@/paraglide/messages.js";
 
 import { ContentPage } from "@/components/content/content-page";
-import { ProjectsCard } from "@/components/content/projects-card";
+import { ProjectCard } from "@/components/content/project-card";
 
 export const Route = createFileRoute("/projects/")({
   component: Projects,
@@ -29,7 +29,7 @@ function Projects() {
       emptyTitle={m["projects_content.empty_title"]()}
       emptyDescription={m["projects_content.empty_description"]()}
       renderCard={project => (
-        <ProjectsCard key={project.slug} project={project} />
+        <ProjectCard key={project.slug} project={project} />
       )}
     />
   );

@@ -10,7 +10,6 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-  ItemDescription
 } from "@/components/ui/item";
 
 import { SOCIALS } from "@/constants";

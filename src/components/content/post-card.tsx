@@ -10,7 +10,7 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
-export function BlogCard({ post }) {
+export function PostCard({ post }) {
   return (
     <Card
       key={post.slug}

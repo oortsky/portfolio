@@ -1,17 +1,13 @@
 import { posts } from "@velite";
 import { m } from "@/paraglide/messages.js";
 
-import { BlogCard } from "@/components/content/blog-card";
+import { PostCard } from "@/components/content/post-card";
 import { ContentEmpty } from "@/components/content/content-empty";
 import { ContentSection } from "@/components/content/content-section";
 
 export function HomeBlog() {
   const latestPosts = [...posts]
-    .sort(
-      (a, b) =>
-        new Date(b.date).getTime() -
-        new Date(a.date).getTime()
-    )
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 8);
 
   return (
@@ -24,10 +20,7 @@ export function HomeBlog() {
       {latestPosts.length > 0 ? (
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {latestPosts.map(post => (
-            <BlogCard
-              key={post.slug}
-              post={post}
-            />
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
       ) : (

@@ -1,7 +1,7 @@
 import { projects } from "@velite";
 import { m } from "@/paraglide/messages.js";
 
-import { ProjectsCard } from "@/components/content/projects-card";
+import { ProjectCard } from "@/components/content/project-card";
 import { ContentEmpty } from "@/components/content/content-empty";
 import { ContentSection } from "@/components/content/content-section";
 
@@ -20,7 +20,7 @@ export function HomeProjects() {
       {featuredProjects.length > 0 ? (
         <div className="grid gap-8 md:grid-cols-3">
           {featuredProjects.map(project => (
-            <ProjectsCard key={project.slug} project={project} />
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       ) : (

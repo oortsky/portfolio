@@ -18,25 +18,25 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => ({
     meta: [
       {
-        title: `${loaderData.post.title} | ${m["seo.blog.title"]()}`
+        title: `${loaderData?.post.title} | ${m["seo.blog.title"]()}`
       },
       {
         name: "description",
         content:
-          loaderData.post.description ??
-          loaderData.post.excerpt ??
+          loaderData?.post.description ??
+          loaderData?.post.excerpt ??
           m["seo.post.description"]()
       },
 
       {
         property: "og:title",
-        content: `${loaderData.post.title} | ${m["seo.blog.title"]()}`
+        content: `${loaderData?.post.title} | ${m["seo.blog.title"]()}`
       },
       {
         property: "og:description",
         content:
-          loaderData.post.description ??
-          loaderData.post.excerpt ??
+          loaderData?.post.description ??
+          loaderData?.post.excerpt ??
           m["seo.post.description"]()
       },
       {
@@ -50,13 +50,13 @@ export const Route = createFileRoute("/blog/$slug")({
       },
       {
         name: "twitter:title",
-        content: `${loaderData.post.title} | ${m["seo.blog.title"]()}`
+        content: `${loaderData?.post.title} | ${m["seo.blog.title"]()}`
       },
       {
         name: "twitter:description",
         content:
-          loaderData.post.description ??
-          loaderData.post.excerpt ??
+          loaderData?.post.description ??
+          loaderData?.post.excerpt ??
           m["seo.post.description"]()
       }
     ]
