@@ -25,7 +25,7 @@ export function ErrorPage({ error }: { error?: unknown }) {
       <EmptyContent>
         {import.meta.env.DEV && error && (
           <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs opacity-60">
-            {String(error)}
+            {error instanceof Error ? error.message : String(error)}
           </code>
         )}
 

@@ -14,7 +14,10 @@ export function LangToggle() {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Tabs defaultValue={locale} onValueChange={value => setLocale(value)}>
+        <Tabs
+          defaultValue={locale}
+          onValueChange={value => setLocale(value as "en" | "id")}
+        >
           <TabsList className="h-10 px-1.5 rounded-full">
             <TabsTrigger value="en" className="rounded-full">
               EN

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { m } from "@/paraglide/messages.js";
+import type { Project } from "@velite";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -12,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Code, ExternalLink } from "lucide-react";
 
-export function ProjectCard({ project }) {
+export function ProjectCard({ project }: {project: Project}) {
   return (
     <Card
       key={project.slug}

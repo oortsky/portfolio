@@ -12,7 +12,7 @@ import {
 import { Menu, X } from "lucide-react";
 
 export function MenuToggle() {
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -22,20 +22,20 @@ export function MenuToggle() {
             size="icon"
             className="h-10 w-10 rounded-full md:hidden"
             aria-label={
-              open
+              isOpen
                 ? m["navbar.menu_toggle.label.close"]()
                 : m["navbar.menu_toggle.label.open"]()
             }
-            onClick={prev => setOpen(prev)}
+            onClick={() => setIsOpen(prev => !prev)}
           >
             <X
-              className={`absolute size-4 transition-all ${open ? "rotate-0 scale-100" : "rotate-90 scale-0"}`}
+              className={`absolute size-4 transition-all ${isOpen ? "rotate-0 scale-100" : "rotate-90 scale-0"}`}
             />
             <Menu
-              className={`size-4  transition-all ${open ? "-rotate-90 scale-0" : "rotate-0 scale-100"}`}
+              className={`size-4  transition-all ${isOpen ? "-rotate-90 scale-0" : "rotate-0 scale-100"}`}
             />
             <span className="sr-only">
-              {open
+              {isOpen
                 ? m["navbar.menu_toggle.label.close"]()
                 : m["navbar.menu_toggle.label.open"]()}
             </span>
@@ -46,7 +46,7 @@ export function MenuToggle() {
         </TooltipContent>
       </Tooltip>
 
-      <MenuDrawer open={open} onOpenChange={setOpen} />
+      <MenuDrawer open={isOpen} onOpenChange={setIsOpen} />
     </>
   );
 }

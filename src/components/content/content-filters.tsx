@@ -52,7 +52,7 @@ export function ContentFilters({
 
       <Select
         value={category}
-        onValueChange={e => onCategoryChange(e.target.value)}
+        onValueChange={value => onCategoryChange(value)}
       >
         <SelectTrigger>
           <SelectValue
@@ -72,8 +72,8 @@ export function ContentFilters({
 
       <Select
         value={sort}
-        onValueChange={e =>
-          onSortChange(e.target.value as "newest" | "oldest" | "a-z" | "z-a")
+        onValueChange={value =>
+          onSortChange(value as "newest" | "oldest" | "a-z" | "z-a")
         }
       >
         <SelectTrigger>

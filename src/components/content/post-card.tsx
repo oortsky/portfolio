@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { m } from "@/paraglide/messages.js";
+import type { Post } from "@velite";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,7 +11,7 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
-export function PostCard({ post }) {
+export function PostCard({ post }: { post: Post }) {
   return (
     <Card
       key={post.slug}
@@ -34,22 +35,18 @@ export function PostCard({ post }) {
       </CardHeader>
 
       <CardFooter className="flex items-center justify-between">
-<span className="text-xs text-muted-foreground">
-  {m["blog_card.reading_time"]({
-    minutes: String(post.metadata.readingTime)
-  })}
-</span>
+        <span className="text-xs text-muted-foreground">
+          {m["blog_card.reading_time"]({
+            minutes: String(post.metadata.readingTime)
+          })}
+        </span>
 
         {post.permalink && (
-<Button asChild>
-  <Link
-    to={post.permalink}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {m["blog_card.read_more"]()}
-  </Link>
-</Button>
+          <Button asChild>
+            <Link to={post.permalink} target="_blank" rel="noopener noreferrer">
+              {m["blog_card.read_more"]()}
+            </Link>
+          </Button>
         )}
       </CardFooter>
     </Card>

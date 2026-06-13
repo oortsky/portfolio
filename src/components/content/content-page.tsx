@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 
+import type { FilterableContent } from "@/hooks/use-content-filter";
+
 import { Separator } from "@/components/ui/separator";
 
 import { ContentEmpty } from "@/components/content/content-empty";
@@ -11,7 +13,7 @@ import { usePagination } from "@/hooks/use-pagination";
 
 import { getCategories } from "@/lib/content";
 
-interface ContentPageProps<T> {
+interface ContentPageProps<T extends FilterableContent> {
   title: string;
   description: string;
 
@@ -25,7 +27,7 @@ interface ContentPageProps<T> {
   perPage?: number;
 }
 
-export function ContentPage<T>({
+export function ContentPage<T extends FilterableContent>({
   title,
   description,
 

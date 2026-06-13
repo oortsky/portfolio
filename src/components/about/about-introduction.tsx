@@ -1,7 +1,6 @@
-import { SocialIcons } from "@/components/social-icons";
 import { m } from "@/paraglide/messages.js";
 
-import { SOCIALS } from "@/constants";
+import { SocialIcons } from "@/components/social-icons";
 
 export function AboutIntroduction() {
   return (
@@ -12,7 +11,7 @@ export function AboutIntroduction() {
         {m["about_intro.content"]()}
       </p>
 
-      <SocialIcons data={SOCIALS} />
+      <SocialIcons />
     </section>
   );
 }
