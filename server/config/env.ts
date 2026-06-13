@@ -1,0 +1,11 @@
+import "dotenv/config";
+
+export const env = {
+  githubClientId: process.env.GITHUB_CLIENT_ID!,
+  githubClientSecret: process.env.GITHUB_CLIENT_SECRET!,
+  githubRedirectUri: process.env.GITHUB_REDIRECT_URI!,
+  appOrigin:
+    process.env.NODE_ENV === "production"
+      ? "https://oortsky.vercel.app"
+      : "http://localhost:5173"
+};

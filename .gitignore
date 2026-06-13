@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+.tanstack
 .velite
+
+.env
+.env.*
 
 public/static
