@@ -30,8 +30,8 @@ const RootLayout = () => (
           <Outlet />
           <Footer />
           <Toaster />
-          {/* <TanStackRouterDevtools /> */}
-          {/* <TanStackDevtools plugins={[formDevtoolsPlugin()]} /> */}
+          <TanStackRouterDevtools />
+          <TanStackDevtools plugins={[formDevtoolsPlugin()]} />
         </TooltipProvider>
       </main>
     </ThemeProvider>

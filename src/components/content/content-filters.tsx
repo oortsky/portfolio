@@ -50,16 +50,16 @@ export function ContentFilters({
         </InputGroupAddon>
       </InputGroup>
 
-      <Select>
+      <Select
+        value={category}
+        onValueChange={e => onCategoryChange(e.target.value)}
+      >
         <SelectTrigger>
           <SelectValue
             placeholder={m["content_filters.field.category.placeholder"]()}
           />
         </SelectTrigger>
-        <SelectContent
-          value={category}
-          onChange={e => onCategoryChange(e.target.value)}
-        >
+        <SelectContent>
           <SelectGroup>
             {categories.map(category => (
               <SelectItem key={category} value={category}>
@@ -70,18 +70,18 @@ export function ContentFilters({
         </SelectContent>
       </Select>
 
-      <Select>
+      <Select
+        value={sort}
+        onValueChange={e =>
+          onSortChange(e.target.value as "newest" | "oldest" | "a-z" | "z-a")
+        }
+      >
         <SelectTrigger>
           <SelectValue
             placeholder={m["content_filters.field.sort.placeholder"]()}
           />
         </SelectTrigger>
-        <SelectContent
-          value={sort}
-          onChange={e =>
-            onSortChange(e.target.value as "newest" | "oldest" | "a-z" | "z-a")
-          }
-        >
+        <SelectContent>
           <SelectGroup>
             <SelectItem value="newest">
               {m["content_filters.field.sort.value.newest"]()}

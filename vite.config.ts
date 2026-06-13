@@ -1,5 +1,4 @@
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
-import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";

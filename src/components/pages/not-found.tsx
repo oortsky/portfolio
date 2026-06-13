@@ -9,8 +9,6 @@ import {
 } from "@/components/ui/empty";
 import { Button } from "@/components/ui/button";
 
-import { ThemeProvider } from "@/components/theme-provider";
-
 export function NotFoundPage() {
   const router = useRouter();
 

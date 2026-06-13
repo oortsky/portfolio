@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Code, ExternalLink } from "lucide-react";
 
-export function ProjectsCard({ project }) {
+export function ProjectCard({ project }) {
   return (
     <Card
       key={project.slug}
@@ -35,7 +35,7 @@ export function ProjectsCard({ project }) {
         <CardDescription>{project.description}</CardDescription>
 
         <div className="flex flex-wrap gap-2 pt-2">
-          {project.technologies?.map(tech => (
+          {project.technologies?.map((tech: string) => (
             <span key={tech} className="text-xs px-2 py-1 rounded-md bg-muted">
               {tech}
             </span>
