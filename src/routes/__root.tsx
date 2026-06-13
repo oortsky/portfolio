@@ -1,7 +1,4 @@
 import { createRootRoute, Outlet, HeadContent } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { TanStackDevtools } from "@tanstack/react-devtools";
-import { formDevtoolsPlugin } from "@tanstack/react-form-devtools";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { NotFoundPage } from "@/components/pages/not-found";
@@ -30,8 +27,6 @@ const RootLayout = () => (
           <Outlet />
           <Footer />
           <Toaster />
-          <TanStackRouterDevtools />
-          <TanStackDevtools plugins={[formDevtoolsPlugin()]} />
         </TooltipProvider>
       </main>
     </ThemeProvider>
