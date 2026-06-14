@@ -4,7 +4,7 @@ import { getCookie, setCookie } from "hono/cookie";
 import { env } from "./_env";
 
 export const config = {
-  runtime: "nodejs",
+  runtime: "nodejs"
 };
 
 const app = new Hono().basePath("/api");
@@ -33,14 +33,14 @@ app.get("/auth", c => {
     secure: true,
     sameSite: "Lax",
     maxAge: 600,
-    path: "/",
+    path: "/"
   });
 
   const authURL = new URL("https://github.com/login/oauth/authorize");
 
   authURL.searchParams.set("client_id", env.githubClientId);
   authURL.searchParams.set("redirect_uri", env.githubRedirectUri);
-  authURL.searchParams.set("scope", "repo user"); // sesuaikan kalau cuma butuh login
+  authURL.searchParams.set("scope", "repo user");
   authURL.searchParams.set("state", state);
 
   return c.redirect(authURL.toString());
@@ -54,26 +54,33 @@ app.get("/auth/callback", async c => {
   if (!code || !state || state !== savedState) {
     return c.html(
       popupResponse(
-        { type: "oauth-error", provider: "github", error: "Invalid state or missing code" },
-        env.appUrl
+        {
+          type: "oauth-error",
+          provider: "github",
+          error: "Invalid state or missing code"
+        },
+        env.appOrigin
       )
     );
   }
 
   try {
-    const tokenResponse = await fetch("https://github.com/login/oauth/access_token", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        client_id: env.githubClientId,
-        client_secret: env.githubClientSecret,
-        code,
-        redirect_uri: env.githubRedirectUri,
-      }),
-    });
+    const tokenResponse = await fetch(
+      "https://github.com/login/oauth/access_token",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          client_id: env.githubClientId,
+          client_secret: env.githubClientSecret,
+          code,
+          redirect_uri: env.githubRedirectUri
+        })
+      }
+    );
 
     const tokenData = (await tokenResponse.json()) as {
       access_token?: string;
@@ -82,14 +89,22 @@ app.get("/auth/callback", async c => {
     };
 
     if (!tokenData.access_token) {
-      console.error("GitHub token exchange failed:", tokenData.error, tokenData.error_description);
+      console.error(
+        "GitHub token exchange failed:",
+        tokenData.error,
+        tokenData.error_description
+      );
       throw new Error("Access token not found");
     }
 
     return c.html(
       popupResponse(
-        { type: "oauth-success", provider: "github", token: tokenData.access_token },
-        env.appUrl
+        {
+          type: "oauth-success",
+          provider: "github",
+          token: tokenData.access_token
+        },
+        env.appOrigin
       )
     );
   } catch (err) {
@@ -98,11 +113,10 @@ app.get("/auth/callback", async c => {
     return c.html(
       popupResponse(
         { type: "oauth-error", provider: "github", error: "OAuth failed" },
-        env.appUrl
+        env.appOrigin
       )
     );
   }
 });
 
-export const GET = handle(app);
-export const POST = handle(app);
+export default handle(app);
