@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { getCookie, setCookie } from "hono/cookie";
-import { env } from "../src/lib/env";
+import { env } from "./_env";
 
 export const config = {
   runtime: "nodejs",
