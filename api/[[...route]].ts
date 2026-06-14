@@ -16,7 +16,7 @@ const env = {
       : "http://localhost:5173"
 };
 
-const app = new Hono()
+const app = new Hono();
 
 function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   const message = JSON.stringify(payload);
@@ -58,5 +58,7 @@ app.get("/api/auth", c => {
 app.get("/api/auth/callback", async c => {
   return c.text("Callback...");
 });
+
+app.get("/auth/test", c => c.text("test"));
 
 export default handle(app);
