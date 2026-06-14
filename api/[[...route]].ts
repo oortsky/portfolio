@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
-import { getCookie } from "hono/cookie";
+import { getCookie, setCookie } from "hono/cookie";
 
 export const config = {
   runtime: "edge"
@@ -15,6 +15,8 @@ const env = {
       ? "https://oortsky.vercel.app"
       : "http://localhost:5173"
 };
+
+const app = new Hono().basePath("/api");
 
 function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   const message = JSON.stringify(payload);
@@ -32,9 +34,28 @@ function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   `;
 }
 
-const app = new Hono();
+app.get("/auth", c => {
+  const state = crypto.randomUUID();
 
-app.get("/api/auth/callback", async c => {
+  setCookie(c, "oauth_state", state, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "Lax",
+    maxAge: 600,
+    path: "/"
+  });
+
+  const authURL = new URL("https://github.com/login/oauth/authorize");
+
+  authURL.searchParams.set("client_id", env.githubClientId);
+  authURL.searchParams.set("redirect_uri", env.githubRedirectUri);
+  authURL.searchParams.set("scope", "repo user");
+  authURL.searchParams.set("state", state);
+
+  return c.redirect(authURL.toString());
+});
+
+app.get("/auth/callback", async c => {
   const code = c.req.query("code");
   const state = c.req.query("state");
   const savedState = getCookie(c, "oauth_state");
