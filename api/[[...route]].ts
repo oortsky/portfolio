@@ -1,10 +1,19 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { getCookie, setCookie } from "hono/cookie";
-import { env } from "./_env";
 
 export const config = {
-  runtime: "nodejs"
+  runtime: "edge"
+};
+
+const env = {
+  githubClientId: process.env.GITHUB_CLIENT_ID!,
+  githubClientSecret: process.env.GITHUB_CLIENT_SECRET!,
+  githubRedirectUri: process.env.GITHUB_REDIRECT_URI!,
+  appOrigin:
+    process.env.NODE_ENV === "production"
+      ? "https://oortsky.vercel.app"
+      : "http://localhost:5173"
 };
 
 const app = new Hono().basePath("/api");
