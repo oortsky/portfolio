@@ -61,4 +61,10 @@ app.get("/api/auth/callback", async c => {
 
 app.get("/auth/test", c => c.text("test"));
 
+app.get("*", (c) => {
+  return c.json({
+    path: c.req.path,
+  });
+});
+
 export default handle(app);
