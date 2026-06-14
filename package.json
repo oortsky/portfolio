@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "predev": "cp public/admin/config.dev.yml public/admin/config.yml",
     "dev": "concurrently \"velite dev\" \"vite\"",
     "dev:web": "vite",
     "dev:content": "velite dev",
-    "prebuild": "paraglide-js compile && velite",
+    "prebuild": "cp public/admin/config.prod.yml public/admin/config.yml && paraglide-js compile && velite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

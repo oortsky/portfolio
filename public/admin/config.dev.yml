@@ -1,0 +1,115 @@
+backend:
+  name: github
+  repo: oortsky/portfolio
+  branch: main
+
+site_url: https://oortsky.vercel.app
+
+publish_mode: editorial_workflow
+
+media_folder: "src/assets/uploads"
+public_folder: "/src/assets/uploads"
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/content/posts
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Description
+        name: description
+        widget: text
+
+      - label: Date
+        name: date
+        widget: datetime
+        default: "{{now}}"
+
+      - label: Category
+        name: category
+        widget: string
+
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+
+      - label: Featured
+        name: featured
+        widget: boolean
+        default: false
+
+      - label: Cover
+        name: cover
+        widget: image
+        required: false
+
+      - label: Content
+        name: body
+        widget: markdown
+
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/content/projects
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Description
+        name: description
+        widget: text
+
+      - label: Category
+        name: category
+        widget: string
+
+      - label: Technologies
+        name: technologies
+        widget: list
+        required: false
+
+      - label: Status
+        name: status
+        widget: select
+        options:
+          - Planning
+          - In Progress
+          - Completed
+          - Archived
+        default: In Progress
+
+      - label: Featured
+        name: featured
+        widget: boolean
+        default: false
+
+      - label: Repository
+        name: repository
+        widget: string
+        required: false
+
+      - label: Website
+        name: website
+        widget: string
+        required: false
+
+      - label: Cover
+        name: cover
+        widget: image
+        required: false
+
+      - label: Content
+        name: body
+        widget: markdown

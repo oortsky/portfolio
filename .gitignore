@@ -27,6 +27,6 @@ dist-ssr
 .velite
 
 .env
-.env.*
+.env.local
 
 public/static
