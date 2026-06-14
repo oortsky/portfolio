@@ -16,7 +16,7 @@ const env = {
       : "http://localhost:5173"
 };
 
-const app = new Hono().basePath("/api");
+const app = new Hono()
 
 function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   const message = JSON.stringify(payload);
@@ -34,7 +34,7 @@ function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   `;
 }
 
-app.get("/auth", c => {
+app.get("/api/auth", c => {
   const state = crypto.randomUUID();
 
   setCookie(c, "oauth_state", state, {
@@ -55,7 +55,7 @@ app.get("/auth", c => {
   return c.redirect(authURL.toString());
 });
 
-app.get("/auth/callback", async c => {
+app.get("/api/auth/callback", async c => {
   return c.text("Callback...");
 });
 
