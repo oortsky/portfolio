@@ -56,76 +56,7 @@ app.get("/auth", c => {
 });
 
 app.get("/auth/callback", async c => {
-  const code = c.req.query("code");
-  const state = c.req.query("state");
-  const savedState = getCookie(c, "oauth_state");
-
-  if (!code || !state || state !== savedState) {
-    return c.html(
-      popupResponse(
-        {
-          type: "oauth-error",
-          provider: "github",
-          error: "Invalid state or missing code"
-        },
-        env.appOrigin
-      )
-    );
-  }
-
-  try {
-    const tokenResponse = await fetch(
-      "https://github.com/login/oauth/access_token",
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          client_id: env.githubClientId,
-          client_secret: env.githubClientSecret,
-          code,
-          redirect_uri: env.githubRedirectUri
-        })
-      }
-    );
-
-    const tokenData = (await tokenResponse.json()) as {
-      access_token?: string;
-      error?: string;
-      error_description?: string;
-    };
-
-    if (!tokenData.access_token) {
-      console.error(
-        "GitHub token exchange failed:",
-        tokenData.error,
-        tokenData.error_description
-      );
-      throw new Error("Access token not found");
-    }
-
-    return c.html(
-      popupResponse(
-        {
-          type: "oauth-success",
-          provider: "github",
-          token: tokenData.access_token
-        },
-        env.appOrigin
-      )
-    );
-  } catch (err) {
-    console.error("OAuth callback error:", err);
-
-    return c.html(
-      popupResponse(
-        { type: "oauth-error", provider: "github", error: "OAuth failed" },
-        env.appOrigin
-      )
-    );
-  }
+  return c.text("Callback...");
 });
 
 export default handle(app);
