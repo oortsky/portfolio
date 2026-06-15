@@ -13,16 +13,22 @@ const env = {
 
 const app = new Hono().basePath("/api");
 
-function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
-  const message = JSON.stringify(payload);
-  const origin = JSON.stringify(targetOrigin);
+function popupResponse(message: string) {
+  const payload = JSON.stringify(message);
 
   return `
     <html>
       <body>
         <script>
-          window.opener?.postMessage(${message}, ${origin});
-          window.close();
+          (function() {
+            function receiveMessage(e) {
+              window.opener.postMessage(${payload}, e.origin);
+              window.removeEventListener("message", receiveMessage, false);
+              setTimeout(function() { window.close(); }, 300);
+            }
+            window.addEventListener("message", receiveMessage, false);
+            window.opener.postMessage("authorizing:github", "*");
+          })();
         </script>
       </body>
     </html>
@@ -57,14 +63,7 @@ app.get("/auth/github/callback", async c => {
 
   if (!code || !state || state !== savedState) {
     return c.html(
-      popupResponse(
-        {
-          type: "oauth-error",
-          provider: "github",
-          error: "Invalid state or missing code"
-        },
-        env.appOrigin
-      )
+      popupResponse("authorization:github:error:Invalid state or missing code")
     );
   }
 
@@ -101,25 +100,16 @@ app.get("/auth/github/callback", async c => {
       throw new Error("Access token not found");
     }
 
-    return c.html(
-      popupResponse(
-        {
-          type: "oauth-success",
-          provider: "github",
-          token: tokenData.access_token
-        },
-        env.appOrigin
-      )
-    );
+    const content = JSON.stringify({
+      token: tokenData.access_token,
+      provider: "github"
+    });
+
+    return c.html(popupResponse(`authorization:github:success:${content}`));
   } catch (err) {
     console.error("OAuth callback error:", err);
 
-    return c.html(
-      popupResponse(
-        { type: "oauth-error", provider: "github", error: "OAuth failed" },
-        env.appOrigin
-      )
-    );
+    return c.html(popupResponse("authorization:github:error:OAuth failed"));
   }
 });
 

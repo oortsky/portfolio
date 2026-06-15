@@ -43,9 +43,7 @@ export function PostCard({ post }: { post: Post }) {
 
         {post.permalink && (
           <Button asChild>
-            <Link to={post.permalink} target="_blank" rel="noopener noreferrer">
-              {m["blog_card.read_more"]()}
-            </Link>
+            <Link to={post.permalink}>{m["blog_card.read_more"]()}</Link>
           </Button>
         )}
       </CardFooter>

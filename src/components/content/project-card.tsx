@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Code, ExternalLink } from "lucide-react";
 
-export function ProjectCard({ project }: {project: Project}) {
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card
       key={project.slug}
@@ -54,8 +54,6 @@ export function ProjectCard({ project }: {project: Project}) {
             <Button asChild>
               <Link
                 to={project.permalink}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 {m["projects_card.read_more"]()}
               </Link>
