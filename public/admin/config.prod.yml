@@ -3,7 +3,7 @@ backend:
   repo: oortsky/portfolio
   branch: main
   base_url: https://oortsky.vercel.app/
-  auth_endpoint: api/auth
+  auth_endpoint: api/auth/github
 
 site_url: https://oortsky.vercel.app
 

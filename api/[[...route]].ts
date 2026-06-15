@@ -1,10 +1,5 @@
 import { Hono } from "hono";
-import { handle } from "hono/vercel";
 import { getCookie, setCookie } from "hono/cookie";
-
-export const config = {
-  runtime: "nodejs"
-};
 
 const env = {
   githubClientId: process.env.GITHUB_CLIENT_ID!,
@@ -34,7 +29,7 @@ function popupResponse(payload: Record<string, unknown>, targetOrigin: string) {
   `;
 }
 
-app.get("/auth", c => {
+app.get("/auth/github", c => {
   const state = crypto.randomUUID();
 
   setCookie(c, "oauth_state", state, {
@@ -55,7 +50,7 @@ app.get("/auth", c => {
   return c.redirect(authURL.toString());
 });
 
-app.get("/auth/callback", async c => {
+app.get("/auth/github/callback", async c => {
   const code = c.req.query("code");
   const state = c.req.query("state");
   const savedState = getCookie(c, "oauth_state");
@@ -128,4 +123,4 @@ app.get("/auth/callback", async c => {
   }
 });
 
-export default handle(app);
+export default app;
