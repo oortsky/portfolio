@@ -61,7 +61,60 @@ export function ContentDetail({
       <Separator />
 
       <section
-        className="prose-custom"
+        className="
+    prose prose-neutral dark:prose-invert
+    max-w-none
+
+    prose-headings:scroll-mt-24
+    prose-headings:font-bold
+    prose-headings:tracking-tight
+
+    prose-h1:text-4xl
+    prose-h2:text-3xl
+    prose-h3:text-2xl
+
+    prose-p:leading-8
+
+    prose-a:text-primary
+    prose-a:no-underline
+    hover:prose-a:underline
+
+    prose-img:rounded-xl
+    prose-img:border
+    prose-img:shadow-md
+
+    prose-blockquote:border-l-4
+    prose-blockquote:italic
+
+    prose-code:rounded
+    prose-code:bg-muted
+    prose-code:px-1.5
+    prose-code:py-0.5
+    prose-code:font-mono
+    prose-code:text-sm
+
+    prose-pre:rounded-xl
+    prose-pre:border
+    prose-pre:bg-muted
+
+    prose-table:block
+    prose-table:w-full
+    prose-table:overflow-x-auto
+
+    prose-th:border
+    prose-th:bg-muted
+    prose-th:px-4
+    prose-th:py-2
+
+    prose-td:border
+    prose-td:px-4
+    prose-td:py-2
+
+    prose-ul:list-disc
+    prose-ol:list-decimal
+
+    prose-li:marker:text-muted-foreground
+  "
         dangerouslySetInnerHTML={{
           __html: content
         }}
