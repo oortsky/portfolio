@@ -5,7 +5,7 @@ export default defineConfig({
   output: {
     data: ".velite",
     assets: "src/assets/uploads",
-    base: "/src/assets/uploads/",
+    base: "../../assets/uploads/",
     name: "[name]-[hash:8].[ext]",
     clean: true
   },
@@ -15,14 +15,15 @@ export default defineConfig({
       pattern: "posts/**/*.md",
       schema: s
         .object({
-          title: s.string().max(99),
-          slug: s.path(),
+          title: s.string().min(1).max(100),
 
-          description: s.string().max(160),
+          slug: s.slug(),
+
+          description: s.string().min(1).max(200),
 
           date: s.isodate(),
 
-          category: s.string(),
+          category: s.string().min(1),
 
           tags: s.array(s.string()).default([]),
 
@@ -46,12 +47,13 @@ export default defineConfig({
       pattern: "projects/**/*.md",
       schema: s
         .object({
-          title: s.string().max(99),
-          slug: s.path(),
+          title: s.string().min(1).max(100),
 
-          description: s.string().max(160),
+          slug: s.slug(),
 
-          category: s.string(),
+          description: s.string().min(1).max(200),
+
+          category: s.string().min(1),
 
           technologies: s.array(s.string()).default([]),
 
@@ -62,9 +64,13 @@ export default defineConfig({
           featured: s.boolean().default(false),
 
           repository: s.string().optional(),
+
           website: s.string().optional(),
 
           cover: s.image().optional(),
+
+          metadata: s.metadata(),
+          excerpt: s.excerpt(),
 
           content: s.markdown()
         })

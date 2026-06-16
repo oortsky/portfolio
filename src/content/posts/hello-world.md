@@ -1,5 +1,6 @@
 ---
 title: Hello World
+slug: hello-world
 description: Hello world or everyone! I'm Bayu Aprio Pamungkas (OORTSKY)
 date: 2026-06-16T22:35:00.000+07:00
 category: Welcome

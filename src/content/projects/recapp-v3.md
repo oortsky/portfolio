@@ -1,5 +1,6 @@
 ---
 title: Recapp V3
+slug: recapp-v3
 description: Recapp is a productivity reporting web app.
 category: Productivity
 technologies:
@@ -8,7 +9,6 @@ status: Completed
 featured: true
 repository: https://github.com/oortsky/recapp-tree
 website: https://recapp-tree.vercel.app/
-cover: /src/assets/uploads/20260616_215900.png
 ---
 
 #### Introduction:

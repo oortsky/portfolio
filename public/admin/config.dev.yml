@@ -16,16 +16,30 @@ collections:
     label_singular: Post
     folder: src/content/posts
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
 
     fields:
       - label: Title
         name: title
         widget: string
+        hint: Maximum 100 characters
+        pattern:
+          - ^.{1,100}$
+          - Maximum 100 characters
+
+      - label: Slug
+        name: slug
+        widget: string
+        hint: Auto generated from title
+        required: true
 
       - label: Description
         name: description
         widget: text
+        hint: Maximum 200 characters
+        pattern:
+          - ^.{1,200}$
+          - Maximum 200 characters
 
       - label: Date
         name: date
@@ -60,16 +74,30 @@ collections:
     label_singular: Project
     folder: src/content/projects
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
 
     fields:
       - label: Title
         name: title
         widget: string
+        hint: Maximum 100 characters
+        pattern:
+          - ^.{1,100}$
+          - Maximum 100 characters
+
+      - label: Slug
+        name: slug
+        widget: string
+        hint: Auto generated from title
+        required: true
 
       - label: Description
         name: description
         widget: text
+        hint: Maximum 200 characters
+        pattern:
+          - ^.{1,200}$
+          - Maximum 200 characters
 
       - label: Category
         name: category
