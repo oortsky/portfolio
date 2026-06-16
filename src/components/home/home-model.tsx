@@ -31,7 +31,7 @@ export function HomeModel() {
     const loader = new GLTFLoader();
 
     loader.load(
-      "/assets/neko/scene.gltf",
+      "/assets/models/cat/scene.gltf",
 
       (gltf: GLTF) => {
         model = gltf.scene;

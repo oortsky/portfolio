@@ -9,7 +9,6 @@ category: Productivity
 status: Completed
 featured: true
 website: https://recapp-tree.vercel.app/
-cover: /src/assets/uploads/20260616_215900-fb084e6b.png
 ---
 
 #### Introduction:
