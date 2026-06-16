@@ -26,6 +26,8 @@ export function ContentDetail({
   backHref,
   backLabel,
 
+  cover,
+
   title,
   description,
 
