@@ -1,0 +1,102 @@
+@layer components {
+  .prose-custom {
+    @apply prose prose-neutral dark:prose-invert max-w-none;
+  }
+
+  /* Headings */
+  .prose-custom h1 {
+    @apply scroll-mt-24 text-4xl font-bold tracking-tight;
+  }
+
+  .prose-custom h2 {
+    @apply scroll-mt-24 mt-12 text-3xl font-semibold tracking-tight;
+  }
+
+  .prose-custom h3 {
+    @apply scroll-mt-24 mt-10 text-2xl font-semibold;
+  }
+
+  .prose-custom h4 {
+    @apply scroll-mt-24 text-xl font-semibold;
+  }
+
+  /* Paragraph */
+  .prose-custom p {
+    @apply leading-8 text-muted-foreground;
+  }
+
+  /* Links */
+  .prose-custom a {
+    @apply text-primary font-medium no-underline transition-colors;
+  }
+
+  .prose-custom a:hover {
+    @apply underline;
+  }
+
+  /* Lists */
+  .prose-custom ul {
+    @apply my-6;
+  }
+
+  .prose-custom ol {
+    @apply my-6;
+  }
+
+  .prose-custom li {
+    @apply text-muted-foreground;
+  }
+
+  /* Images */
+  .prose-custom img {
+    @apply rounded-2xl border shadow-sm;
+  }
+
+  /* Blockquote */
+  .prose-custom blockquote {
+    @apply border-l-4 pl-4 italic text-muted-foreground;
+  }
+
+  /* Inline Code */
+  .prose-custom code {
+    @apply rounded-md bg-muted px-1.5 py-0.5 text-sm font-medium;
+  }
+
+  .prose-custom code::before,
+  .prose-custom code::after {
+    content: none;
+  }
+
+  /* Code Block */
+  .prose-custom pre {
+    @apply overflow-x-auto rounded-2xl border bg-muted p-4;
+  }
+
+  .prose-custom pre code {
+    @apply bg-transparent p-0;
+  }
+
+  /* Tables */
+  .prose-custom table {
+    @apply block w-full overflow-x-auto;
+  }
+
+  .prose-custom th {
+    @apply bg-muted font-semibold;
+  }
+
+  .prose-custom th,
+  .prose-custom td {
+    @apply border px-4 py-2;
+  }
+
+  /* Horizontal Rule */
+  .prose-custom hr {
+    @apply my-10;
+  }
+
+  /* Strong */
+  .prose-custom strong {
+    @apply font-semibold text-foreground;
+  }
+}

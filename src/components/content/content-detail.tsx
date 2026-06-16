@@ -61,7 +61,7 @@ export function ContentDetail({
       <Separator />
 
       <section
-        className="prose prose-neutral dark:prose-invert max-w-none prose-headings:scroll-mt-24"
+        className="prose-custom"
         dangerouslySetInnerHTML={{
           __html: content
         }}
