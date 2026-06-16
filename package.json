@@ -64,6 +64,7 @@
     "@eslint/js": "^9.36.0",
     "@hono/vite-dev-server": "^0.26.0",
     "@inlang/paraglide-js": "^2.18.2",
+    "@tailwindcss/typography": "^0.5.20",
     "@tanstack/eslint-plugin-query": "^5.101.0",
     "@tanstack/router-plugin": "^1.168.14",
     "@types/canvas-confetti": "^1.9.0",
