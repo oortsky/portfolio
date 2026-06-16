@@ -25,7 +25,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.cover.src}
             alt={project.title}
-            className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+            className="relative z-20 aspect-video w-full object-cover brightness-60 dark:brightness-40"
           />
         </>
       )}
@@ -52,9 +52,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
           {project.permalink && (
             <Button asChild>
-              <Link
-                to={project.permalink}
-              >
+              <Link to={project.permalink}>
                 {m["projects_card.read_more"]()}
               </Link>
             </Button>

@@ -101,6 +101,11 @@ collections:
           - ^.{1,200}$
           - Maximum 200 characters
 
+      - label: Date
+        name: date
+        widget: datetime
+        default: "{{now}}"
+
       - label: Category
         name: category
         widget: string

@@ -23,7 +23,7 @@ export function PostCard({ post }: { post: Post }) {
           <img
             src={post.cover.src}
             alt={post.title}
-            className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+            className="relative z-20 aspect-video w-full object-cover brightness-60 dark:brightness-40"
           />
         </>
       )}

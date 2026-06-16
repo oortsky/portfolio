@@ -69,7 +69,14 @@ function ProjectDetail() {
       content={project.content}
       meta={
         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-          <span>{project.status}</span>
+          <span>
+            {new Date(project.date).toLocaleDateString("en-US", {
+              day: "numeric",
+              month: "long",
+              year: "numeric"
+            })}
+          </span>{" "}
+          • <span>{project.status}</span>
         </div>
       }
       badges={

@@ -1,10 +1,11 @@
 ---
 title: Recapp V3
+slug: recapp-v3
 description: Recapp is a productivity reporting web app.
+date: 2026-06-18T09:12:00.000+07:00
 technologies:
   - Next.js
 repository: https://github.com/oortsky/recapp-tree
-slug: recapp-v3
 category: Productivity
 status: Completed
 featured: true

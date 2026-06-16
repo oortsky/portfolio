@@ -3,6 +3,7 @@ title: Quicksort
 slug: quicksort
 description: A project visualizing the algorithm of quicksort created using
   P5.js, I learned it from The Coding Train tutorial course.
+date: 2026-06-16T22:35:00.000+07:00
 category: Algorithm Visualization
 technologies:
   - P5.js

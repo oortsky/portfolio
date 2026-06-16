@@ -53,6 +53,8 @@ export default defineConfig({
 
           description: s.string().min(1).max(200),
 
+          date: s.isodate(),
+
           category: s.string().min(1),
 
           technologies: s.array(s.string()).default([]),

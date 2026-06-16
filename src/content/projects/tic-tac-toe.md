@@ -2,6 +2,7 @@
 title: Tic-Tac-Toe
 slug: tic-tac-toe
 description: Simple Tic-Tac-Toe board game made using React + Vite.
+date: 2026-06-21T16:48:00.000+07:00
 category: Game
 technologies:
   - Vite

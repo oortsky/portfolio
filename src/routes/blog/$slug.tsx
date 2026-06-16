@@ -83,14 +83,13 @@ function BlogDetail() {
               month: "long",
               year: "numeric"
             })}
-          </span>
-
-          <span>
+          </span>{" "}
+          • <span>
             {m["blog_detail.reading_time"]({
               minutes: String(post.metadata.readingTime)
             })}
-          </span>
-
+          </span>{" "}
+          •{" "}
           <span>
             {m["blog_detail.word_count"]({
               count: String(post.metadata.wordCount)
