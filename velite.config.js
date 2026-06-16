@@ -16,7 +16,7 @@ export default defineConfig({
       schema: s
         .object({
           title: s.string().max(99),
-          slug: s.slug("posts"),
+          slug: s.path(),
 
           description: s.string().max(160),
 
@@ -47,7 +47,7 @@ export default defineConfig({
       schema: s
         .object({
           title: s.string().max(99),
-          slug: s.slug("projects"),
+          slug: s.path(),
 
           description: s.string().max(160),
 
