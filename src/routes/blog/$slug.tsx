@@ -72,6 +72,7 @@ function BlogDetail() {
     <ContentDetail
       backHref="/blog"
       backLabel={m["blog_detail.back"]()}
+      cover={post.cover.src}
       title={post.title}
       description={post.description}
       content={post.content}
@@ -84,7 +85,8 @@ function BlogDetail() {
               year: "numeric"
             })}
           </span>{" "}
-          • <span>
+          •{" "}
+          <span>
             {m["blog_detail.reading_time"]({
               minutes: String(post.metadata.readingTime)
             })}

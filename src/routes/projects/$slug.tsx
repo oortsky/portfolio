@@ -64,6 +64,7 @@ function ProjectDetail() {
     <ContentDetail
       backHref="/projects"
       backLabel={m["projects_detail.back"]()}
+      cover={project.cover.src}
       title={project.title}
       description={project.description}
       content={project.content}

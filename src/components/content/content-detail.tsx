@@ -2,12 +2,15 @@ import { Link } from "@tanstack/react-router";
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 import { ArrowLeft } from "lucide-react";
 
 interface ContentDetailProps {
   backHref: string;
   backLabel: string;
+
+  cover: string;
 
   title: string;
   description?: string;
@@ -40,6 +43,19 @@ export function ContentDetail({
             <ArrowLeft /> {backLabel}
           </Link>
         </Button>
+
+        {cover && (
+          <AspectRatio
+            ratio={16 / 9}
+            className="rounded-lg bg-muted overflow-hidden"
+          >
+            <img
+              src={cover}
+              alt={title}
+              className="w-full rounded-lg object-cover"
+            />
+          </AspectRatio>
+        )}
 
         <div className="space-y-3">
           <h1 className="text-4xl font-bold">{title}</h1>
