@@ -21,7 +21,6 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       {project.cover && (
         <>
-          <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
           <img
             src={project.cover.src}
             alt={project.title}

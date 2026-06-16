@@ -49,7 +49,7 @@ export function ContentDetail({
         {cover && (
           <AspectRatio
             ratio={16 / 9}
-            className="rounded-lg bg-muted overflow-hidden"
+            className="rounded-lg bg-muted overflow-hidden shadow-lg"
           >
             <img
               src={cover}

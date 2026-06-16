@@ -19,7 +19,6 @@ export function PostCard({ post }: { post: Post }) {
     >
       {post.cover && (
         <>
-          <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
           <img
             src={post.cover.src}
             alt={post.title}
