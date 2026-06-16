@@ -10,7 +10,7 @@ interface ContentDetailProps {
   backHref: string;
   backLabel: string;
 
-  cover: string;
+  cover?: string;
 
   title: string;
   description?: string;
