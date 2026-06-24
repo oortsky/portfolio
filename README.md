@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# ✨ OORTSKY — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Version](https://img.shields.io/github/package-json/v/oortsky/portfolio?style=flat-square&color=6C63FF)](https://github.com/oortsky/portfolio)
+[![Deploy](https://img.shields.io/badge/vercel-deployed-000?style=flat-square&logo=vercel)](https://oortsky.vercel.app)
+[![License](https://img.shields.io/badge/license-MIT-22D3EE?style=flat-square)](LICENSE)
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.x-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TanStack Router](https://img.shields.io/badge/TanStack_Router-1.x-FF4154?style=flat-square)](https://tanstack.com/router)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Velite](https://img.shields.io/badge/Velite-0.3-F59E0B?style=flat-square)](https://velite.js.org/)
+[![Paraglide JS](https://img.shields.io/badge/Paraglide_JS-2.x-34D399?style=flat-square)](https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Personal portfolio website. Built with a modern React stack, content layer via Velite (MDX), i18n via Paraglide JS, and deployed on Vercel.
 
-## Expanding the ESLint configuration
+🔗 **[oortsky.vercel.app](https://oortsky.vercel.app)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- File-based routing with TanStack Router
+- MDX content layer via Velite (projects, blog)
+- Internationalization (ID/EN) via Paraglide JS
+- Animations with Framer Motion & Three.js
+- Email contact form via EmailJS
+- Dark mode with next-themes
+- Headless CMS via Decap CMS + GitHub OAuth (Hono serverless)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Part      | Technology                |
+| --------- | ------------------------- |
+| Framework | React 19 + Vite 7         |
+| Language  | TypeScript 5.8            |
+| Routing   | TanStack Router           |
+| Styling   | Tailwind CSS + shadcn/ui  |
+| Content   | Velite (MDX)              |
+| i18n      | Paraglide JS              |
+| Animation | Framer Motion, Three.js   |
+| API       | Hono (serverless, `/api`) |
+| CMS       | Decap CMS                 |
+| Deploy    | Vercel                    |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+MIT © [OORTSKY](https://github.com/oortsky)
