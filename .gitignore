@@ -25,6 +25,7 @@ dist-ssr
 
 .tanstack
 .velite
+.vercel
 
 .env
 .env.local
