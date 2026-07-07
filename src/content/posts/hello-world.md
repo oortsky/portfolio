@@ -7,5 +7,6 @@ category: Welcome
 tags:
   - Introduction
 featured: true
+cover: ../../assets/uploads/20260708_010920.png
 ---
 It's my first blog post. I just want to inform this blog will be use for me to share my thought and idea.
