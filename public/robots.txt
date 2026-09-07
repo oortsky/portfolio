@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oortsky.vercel.app/sitemap.xml
